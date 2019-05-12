@@ -71,7 +71,7 @@
 
 ##### Info
  Support For Python Version: ```3.x```<br>
- ReconT Version: ```0.1```<br>
+ ReconT Version: ```0.2```<br>
  By: ```407 Authentic Exploit ```<br>
  Codename: ```JaxBCD```<br>
  
