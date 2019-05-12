@@ -24,6 +24,10 @@
 ### Features
  * Information Security Headers
  * WAF Detector
+ * Information Disclosure
+   - robot.txt
+   - sitemap
+   - mailman 
  * Banner Grabbing
    - Phone Number
    - Credit Card Number
