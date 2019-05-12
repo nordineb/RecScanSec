@@ -2,6 +2,7 @@
 from .utils.information_handler import parser
 from .utils.request_handler import request_handler as request
 from .utils.ngelog import merah,kuning,hijau,biru,logger
+import re
 
 log = logger(__name__)
 class disc(object):
@@ -77,6 +78,20 @@ class disc(object):
              log.log(20,f'{hijau("robots.txt")} File Found: {r.url}')
           else:
              log.log(30,'robots.txt file not Found!?')
+             
+      def mailman(self):
+          log.log(10,'Detecting GNU Mailman')
+          r = self.r.send(
+            mtd='GET',
+            url=f'{self.target}/mailman/admin',
+            verify=False
+          )
+          ver = re.findall(r'version (.*?)</',r.text)
+          if len(ver) > 0 and r.status_code == 200:
+             log.log(20,f' GNU Mailman App Detected: {hijau(r.url)}')
+             log.log(20,f'version: {hijau(ver[0])}')
+          else:
+             log.log(30,'GNU Mailman App Not Detected!?')
 
 
 
