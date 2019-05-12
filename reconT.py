@@ -112,6 +112,7 @@ def main(target,timeout,proxy,cookies):
         dd.ssn()
         dd.sitemap()
         dd.robot()
+        dd.mailman()
         print(batas)
         log.log(50,'Crawling Url Parameter On: {}'.format(merah(res.url)))
         ext = extractor(target,res)
