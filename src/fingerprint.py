@@ -3,6 +3,9 @@ from .utils.information_handler import waf_detect,headers,parser
 from .utils.request_handler import request_handler as request
 from .utils.ngelog import merah,kuning,hijau,biru,skema,no_skema,logger
 from subprocess import Popen,PIPE
+from pprint import pprint
+import ssl
+import socket
 log = logger(__name__)
 
 
@@ -151,6 +154,27 @@ class port_scan(object):
               xxx = i.format('\033[92m','\033[0m')
               log.log(10,f'{xxx}')
 
+class sslInfo(object):
+
+      def __init__(self,target):
+          self.target = no_skema(target)
+          
+      def context(self):
+          contek = ssl.create_default_context()
+          ex = contek.wrap_socket(socket.socket(),server_hostname=self.target)
+          return ex
+          
+      def get_ssl(self):
+          log.log(50,'Getting SSL Info')
+          try:
+              s = self.context()
+              s.connect((self.target,443))
+              info = s.getpeercert()    
+              pprint(info)
+              key = ssl.get_server_certificate((self.target, 443))
+              print(key)
+          except Exception as e:
+             print(e) 
 
           
           
