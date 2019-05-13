@@ -40,6 +40,7 @@
    - Internal Link
    - External Link
  * Port Scanner
+ * Get SSL Info
  * Subdomain Enumeration
 
 
@@ -71,7 +72,7 @@
 
 ##### Info
  Support For Python Version: ```3.x```<br>
- ReconT Version: ```0.2```<br>
+ ReconT Version: ```0.3```<br>
  By: ```407 Authentic Exploit ```<br>
  Codename: ```JaxBCD```<br>
  
