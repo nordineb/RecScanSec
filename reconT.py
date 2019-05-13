@@ -20,7 +20,8 @@ from src.fingerprint import (
     respon_hider,
     location_info,
     reverse_DNS,
-    port_scan
+    port_scan,
+    sslInfo
 )
 from src.disclosure import disc
 from src.crawl import extractor
@@ -103,6 +104,9 @@ def main(target,timeout,proxy,cookies):
         reverse_DNS(target).rDNS()
         print(batas)
         port_scan(target).nmap()
+        print(batas)
+        ssl = sslInfo(target)
+        ssl.get_ssl()
         print(batas)
         log.log(50,'Collecting Information Disclosure!')
         dd = disc(target,cookie=kue,proxy=proxies,timeout=timeout)
