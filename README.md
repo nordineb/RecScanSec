@@ -23,7 +23,10 @@
 
 ### Features
  * Information Security Headers
- * WAF Detector
+   - Click Jacking Analyzer
+   - Cors Wildcard Analyzer
+   - XSS Protector Analyzer
+ * WAF Analyzer
  * Information Disclosure
    - robot.txt
    - sitemap
@@ -39,10 +42,15 @@
    - External Dynamic Paramter
    - Internal Link
    - External Link
+ * HTML Form Detector
  * Port Scanner
- * Get SSL Info
+ * Get SSL Information
  * Subdomain Enumeration
-
+ * Host Information
+   - DNS Server Analysis
+   - MX Records Analysis
+   - TXT Records Analysis
+   - Subdomain Analysis
 
 #### Requirements
  * click
@@ -72,7 +80,7 @@
 
 ##### Info
  Support For Python Version: ```3.x```<br>
- ReconT Version: ```0.3```<br>
+ ReconT Version: ```0.7```<br>
  By: ```407 Authentic Exploit ```<br>
  Codename: ```JaxBCD```<br>
  
