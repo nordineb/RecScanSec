@@ -1,5 +1,6 @@
-import logging
+import logging,os
 from colorlog import ColoredFormatter
+import requests
 from tldextract import extract as tld
 
 def logger(name):
@@ -72,7 +73,15 @@ ban = f'''
         ({a}codename{p}): JaxBCD
 '''
 
-
+def update():
+    r = requests.get('https://github.com/jaxBCD/ReconT/blob/master/src/utils/.version')
+    if '0.7' in r.text:
+       return None
+    else:
+       print('{} Updating New Version'.format(kuning('[!]')))
+       os.system('git pull')
+       exit()
+       return True
 
 
 
