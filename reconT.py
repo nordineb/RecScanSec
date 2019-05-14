@@ -34,8 +34,10 @@ from src.utils.ngelog import (
     merah,
     kuning,
     hijau,
-    ban
+    ban,
+    update
 )
+update()
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 log = logger(__name__)
 
