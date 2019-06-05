@@ -67,7 +67,7 @@ Options:
 <h1 align="center">
     <br>
     <a href="https://github.com/jaxBCD/RecScanSec">
-    <img src="src/utils/SS.png" alt="ReconT" width="400" height="400">
+    <img src="src/utils/SS.png" alt="ReconT" width="400" height="700">
     </a>
     </br>
 </h1>    
