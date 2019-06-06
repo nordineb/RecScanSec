@@ -1,5 +1,0 @@
-requests
-asyncio
-tldextract
-click
-colorlog
