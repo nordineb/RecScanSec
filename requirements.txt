@@ -3,3 +3,4 @@ asyncio
 tldextract
 click
 colorlog
+beautifulsoup4
